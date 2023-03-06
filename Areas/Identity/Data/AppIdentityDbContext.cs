@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GraduateProjectDemo.Areas.Identity.Data;
 
-public class GraduateProjectDemoIdentityDbContext : IdentityDbContext<IdentityUser>
+public class AppIdentityDbContext : IdentityDbContext<IdentityUser>
 {
-    public GraduateProjectDemoIdentityDbContext(DbContextOptions<GraduateProjectDemoIdentityDbContext> options)
+    public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options)
         : base(options)
     {
+        
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

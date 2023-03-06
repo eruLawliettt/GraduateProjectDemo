@@ -1,14 +1,24 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using GraduateProjectDemo.Areas.Identity.Data;
-var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("GraduateProjectDemoIdentityDbContextConnection") ?? throw new InvalidOperationException("Connection string 'GraduateProjectDemoIdentityDbContextConnection' not found.");
+using MyApplication.Data;
 
-builder.Services.AddDbContext<GraduateProjectDemoIdentityDbContext>(options =>
+var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+    ?? throw new InvalidOperationException("Connection string 'AppIdentityDbContextConnection' not found.");
+
+builder.Services.AddDbContext<AppIdentityDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<GraduateProjectDemoIdentityDbContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => 
+{
+    options.SignIn.RequireConfirmedAccount = false;
+    options.Password.RequiredLength = 8;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+})
+.AddEntityFrameworkStores<AppIdentityDbContext>();
 
 builder.Services.AddRazorPages();
 

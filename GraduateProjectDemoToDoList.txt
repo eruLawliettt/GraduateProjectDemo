@@ -1,6 +1,6 @@
-Git repository init
+Git repository init //
 
-Add Identity
+Add Identity //
 
 Configure Identity UI
 --DEADLINE-MAR-7--
