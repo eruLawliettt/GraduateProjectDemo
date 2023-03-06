@@ -6,5 +6,37 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <p>List of users: </p>
+                    <ul class="list-group">
+                        <lu>Email Phone</lu>
+                        @{
+                            foreach(var item in IndexModel.AllUsers)
+                            {
+                                <lu class="list-group-item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                @item.Email
+                                            </div>
+                                            <div class="col">
+                                                @item.PhoneNumber
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </lu>
+                            };
+                        }                        
+                    </ul>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+   
 </div>
