@@ -1,0 +1,16 @@
+Git repository init
+
+Add Identity
+
+Configure Identity UI
+--DEADLINE-MAR-7--
+
+Design database entities
+
+Add entities to a project
+
+Configure CRUD operations for entities
+--DEADLINE-MAR-9--
+
+Design App UI
+--DEADLINE-MAR-11--
