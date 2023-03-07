@@ -14,3 +14,10 @@ Configure CRUD operations for entities
 
 Design App UI
 --DEADLINE-MAR-11--
+
+
+
+
+
+// docker start command: sudo docker start stupefied_stonebraker
+// docker stop command: sudo docker stop stupefied_stonebraker

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using GraduateProjectDemo.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace GraduateProjectDemo.Pages;
