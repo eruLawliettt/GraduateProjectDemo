@@ -1,0 +1,27 @@
+@page
+@using Microsoft.AspNetCore.Identity;
+
+@inject SignInManager<IdentityUser> SignInManager;
+
+@model UsersModel
+@{
+    ViewData["Title"] = "Users List";
+}
+<h1>@ViewData["Title"]</h1>
+@if(SignInManager.IsSignedIn(User))
+{
+    <ul class="list-group">
+    @foreach(var item in Model.Users)
+    {
+        <li class="list-group-item">@item.Nickname @item.PhoneNumber</li>
+    }
+    </ul>
+}
+else
+{
+    <p>You have no permissions to see list of users</p>
+    <p>Please sign in</p>
+}
+
+
+

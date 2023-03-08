@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using GraduateProjectDemo.Areas.Identity.Data;
-using MyApplication.Data;
+using GraduateProjectDemo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
@@ -21,6 +21,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 .AddEntityFrameworkStores<AppIdentityDbContext>();
 
 builder.Services.AddRazorPages();
+builder.Services.AddTransient<IUserService, UserService>();
 
 var app = builder.Build();
 
