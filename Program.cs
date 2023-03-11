@@ -4,7 +4,7 @@ using GraduateProjectDemo.Areas.Identity.Data;
 using GraduateProjectDemo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") 
     ?? throw new InvalidOperationException("Connection string 'AppIdentityDbContextConnection' not found.");
 
 builder.Services.AddDbContext<AppIdentityDbContext>(options =>
@@ -20,6 +20,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 })
 .AddEntityFrameworkStores<AppIdentityDbContext>();
 
+builder.Services.AddAuthorization(options => 
+    options.AddPolicy("MyPollicy0", policy => policy.RequireClaim("CanView")));
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IUserService, UserService>();
 
@@ -36,7 +38,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseAuthentication();;
-
 app.UseAuthorization();
 
 app.MapRazorPages();

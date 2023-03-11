@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/lawliet/Documents/src/GraduateProjectDemo/GraduateProjectDemo.csproj": {}
+    "C:\\Users\\master\\source\\repos\\GraduateProjectDemo-dev\\GraduateProjectDemo.csproj": {}
   },
   "projects": {
-    "/home/lawliet/Documents/src/GraduateProjectDemo/GraduateProjectDemo.csproj": {
+    "C:\\Users\\master\\source\\repos\\GraduateProjectDemo-dev\\GraduateProjectDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lawliet/Documents/src/GraduateProjectDemo/GraduateProjectDemo.csproj",
+        "projectUniqueName": "C:\\Users\\master\\source\\repos\\GraduateProjectDemo-dev\\GraduateProjectDemo.csproj",
         "projectName": "GraduateProjectDemo",
-        "projectPath": "/home/lawliet/Documents/src/GraduateProjectDemo/GraduateProjectDemo.csproj",
-        "packagesPath": "/home/lawliet/.nuget/packages/",
-        "outputPath": "/home/lawliet/Documents/src/GraduateProjectDemo/obj/",
+        "projectPath": "C:\\Users\\master\\source\\repos\\GraduateProjectDemo-dev\\GraduateProjectDemo.csproj",
+        "packagesPath": "C:\\Users\\master\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\master\\source\\repos\\GraduateProjectDemo-dev\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/lawliet/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\master\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +79,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -85,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
